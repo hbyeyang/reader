@@ -42,7 +42,9 @@ class _SplashPage extends State<SplashPage> {
     new Future.delayed(duration, goToPage);
   }
 
-  void goToPage() {
+  Future goToPage() async {
+    Map<String, String> map = Map();
+
     //如果页面还未跳转过则跳转页面
     if (!isStartPage) {
       //跳转主页 且销毁当前页面
